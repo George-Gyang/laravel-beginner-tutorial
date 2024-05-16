@@ -2,5 +2,5 @@
     <x-slot:heading>
         Home Dashbboard
     </x-slot:heading>
-    <h1>Home page</h1>
+    <h1>{{ $greeting }} from Home page. by {{ $name }}</h1>
 </x-layouts>
