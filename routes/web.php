@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Comment;
+use App\Models\Feedback;
 use Illuminate\Support\Arr;
 
 use Illuminate\Support\Facades\Route;
@@ -83,4 +84,15 @@ Route::get('/comments/{id}', function($id){
     $comment = Comment::find($id);
     // dd($comment);
     return view('comments_info', ['comment' => $comment]);
+});
+
+Route::get('/feedback', function(){
+    return view('feedback', ['all_comments' => Feedback::all()]);
+}
+);
+
+Route::get('/feedback/{id}', function($id){
+    $comment = Feedback::find($id);
+    // dd($comment);
+    return view('feedback_info', ['comment' => $comment]);
 });

@@ -38,10 +38,12 @@
                                     About</x-nav-link>
                                 <x-nav-link href="/contact" :active="request()->is('contact')">
                                     Contact</x-nav-link>
-                                <x-nav-link href="/products" :active="request()->is('products')">
-                                    Products</x-nav-link>
                                 <x-nav-link href="/comments" :active="request()->is('comments')">
                                     Comments</x-nav-link>
+                                    <x-nav-link href="/products" :active="request()->is('products')">
+                                        Products</x-nav-link>
+                                <x-nav-link href="/feedback" :active="request()->is('feedback')">
+                                    Feedbacks</x-nav-link>
                             </div>
                         </div>
                     </div>

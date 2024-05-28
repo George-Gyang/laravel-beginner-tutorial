@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Employer;
+use App\Models\Product;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -12,12 +12,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('job_listings', function (Blueprint $table) {
+        Schema::create('feedback', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('salary');
-            // $table->unsignedBigInteger('employer_id');
-            $table->foreignIdFor(Employer::class);
+            $table->string('feedback');
+            $table->foreignIdFor(Product::class);
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('job_listings');
+        Schema::dropIfExists('feedback');
     }
 };

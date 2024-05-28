@@ -1,5 +1,5 @@
 <x-layouts heading="Product Details">
-    <p>Product ID : {{ $job_details['id'] }}</p>
+    <p>Product No : {{ $job_details['id'] }}</p>
     <p>Name : {{ $job_details['name'] }}</p>
     <p>Amount : {{ $job_details['price'] }}</p>
     <p> status : {{ $job_details['availability'] ? "Availability" : "Unavailable" }}</p>
